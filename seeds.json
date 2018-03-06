@@ -2,8 +2,8 @@
 	"name": "OpenDataBio database seeds by version",
 	"versions": {
 		"0.7.2": {
-			"location": "LocationSeed_Brazil_2017-10-25.sql.tar.gz",
-			"taxon": "TaxonSeed_Brazil_APGIV_2017-10-25-partial.sql.tar.gz"
+			"location": "LocationSeed_Brazil_2017-10-25.sql",
+			"taxon": "TaxonSeed_Brazil_APGIV_2017-10-25-partial.sql"
 		}
 	}
 }
