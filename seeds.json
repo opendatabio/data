@@ -1,9 +1,9 @@
 {
 	"name": "OpenDataBio database seeds by version",
 	"versions": {
-		"0.7.2": {
-			"location": "LocationSeed_Brazil_2017-10-25.sql",
-			"taxon": "TaxonSeed_Brazil_APGIV_2017-10-25-partial.sql"
+		"0.7.5": {
+			"location": "LocationSeed_Brazil_2018-03-12.sql",
+			"taxon": "TaxonSeed_Brazil_APGIV_2018-03-13.sql"
 		}
 	}
 }
