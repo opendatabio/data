@@ -2,13 +2,13 @@
 # Flags para o MySQLdump
 DUMPOPTS="--no-create-info --skip-add-drop-table"
 # Informações de conexão
-CONNOPTS="-uopendatabio -p opendatabio"
+CONNOPTS="-uroot -p opendatabio"
 DATE=`date +%Y-%m-%d`
 LOCATIONSEED=LocationSeed_Brazil_$DATE.sql
-TAXONSEED=TaxonSeed_Brazil_APGIV_$DATE.sql
+TAXONSEED=TaxonSeed_APWebOrderLevelTree_$DATE.sql
 
 # Gera o dump
-mysqldump $DUMPOPTS $CONNOPTS locations locations location_related > $LOCATIONSEED
+docker exec -i odb_mysql mysqldump $DUMPOPTS $CONNOPTS locations location_related > $LOCATIONSEED
 # Adiciona o comando para remover os locations existentes
 sed -i '15a\
 SET FOREIGN_KEY_CHECKS=0;\
@@ -19,7 +19,7 @@ DELETE FROM location_related;
 tar czf $LOCATIONSEED.tar.gz $LOCATIONSEED
 
 # Gera o dump
-mysqldump $DUMPOPTS $CONNOPTS taxons taxon_external > $TAXONSEED
+docker exec -i odb_mysql mysqldump $DUMPOPTS $CONNOPTS taxons taxon_external > $TAXONSEED
 # Adiciona o comando para remover os taxons existentes
 sed -i '15a\
 SET FOREIGN_KEY_CHECKS=0;\
