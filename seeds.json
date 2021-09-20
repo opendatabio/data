@@ -6,7 +6,7 @@
 			"taxon": "TaxonSeed_Brazil_APGIV_2018-03-22.sql"
 		}
 		"0.9.1-alpha1": {
-			"location": "LocationSeed_Brazil_2021-08-25.sql",
+			"location": "LocationSeed_Brazil_2021-09-20.sql",
 			"taxon": "TaxonSeed_APWebOrderLevelTree_2021-08-25.sql"
 		}
 	}
